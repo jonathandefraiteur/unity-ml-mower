@@ -20,12 +20,12 @@ It has 3 types of sensors :
 So our inputs is just a vector of 24.
 
 ### The rewards and punishements
-We tried different rewards and punishements for our mower. The best that we found for the model is this :
+We tried different rewards and punishments for our mower. The best that we found for the model is this :
 - each clod mowned : +0.1
 - all clods mowned : +10
 - a rock touched : -1
 
-We will try to add a little punishement for each frame. 
+We will try to add a little punishment for each frame. 
 
 ### The decisions
 A mower can go forward, backward, right and left. So the agent needs to return a vector of 2 (continious values). First value is for speed and the second for the rotation.
@@ -49,3 +49,13 @@ Increase the buffer_size and the batch_size was a good idea from this issue : ht
 ### Conclusion
 
 ### Improvements
+- try the training with 2 or 3 rocks
+- add a little punishment to each frame
+- try with a lower model (layers and hidden units)
+- try with a final score only
+- try with more agents
+- try a custom model (not ppo)
+- try with moving obstacles
+- fix the tensorboard
+- fix the training on a VM linux machine with GPU in the cloud
+- try to train the model with pixels
