@@ -50,6 +50,10 @@ We launch several training. We turned hyperparameters and even change the enviro
 But we trained an agent able to mown clods and avoid rocks !
 Here is the mean rewards during the training :
 
+![alt text](docs/mean_rewards.jpg)
+
+Note : the three peaks means that the agent win the game. Because if all clods are mowned, we give +10 rewards to the agent.
+
 ### Conclusion
 It was very fun for a first start ! We thank Unity guys who developed this new feature. We'll keep to work with it even after the end of the challenge :)
 
