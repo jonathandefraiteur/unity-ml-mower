@@ -21,6 +21,23 @@ public class MowerController : MonoBehaviour
 		gardenBotSensors = GetComponent<GardenBotSensors>();
 		mowerBlade = GetComponent<MowerBlade>();
 	}
+
+	private void OnEnable()
+	{
+		if (gardenBotMove)
+			gardenBotMove.enabled = true;
+		if (gardenBotSensors)
+			gardenBotSensors.enabled = true;
+		if (mowerBlade)
+			mowerBlade.enabled = true;
+	}
+
+	private void OnDisable()
+	{
+		gardenBotMove.enabled = false;
+		gardenBotSensors.enabled = false;
+		mowerBlade.enabled = false;
+	}
 	
 	private void Update ()
 	{

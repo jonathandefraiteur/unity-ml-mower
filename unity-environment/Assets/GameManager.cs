@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
 		MowerController.transform.position = GardenBotStation.transform.position;
 		MowerController.transform.rotation = GardenBotStation.transform.rotation;
 		
-		GrassSpawner.ResetAllClodOfGrass();
+		GrassSpawner.SpawnArea();
 	}
 
 	private void PrintChrono()
@@ -96,5 +96,10 @@ public class GameManager : MonoBehaviour
 		if (secondes.Length < 2)
 			secondes = '0' + secondes;
 		SecondesText.text = secondes;
+	}
+
+	private void OnCollisionEnter(Collision other)
+	{
+		
 	}
 }

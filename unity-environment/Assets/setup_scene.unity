@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 440683541}
-  m_IndirectSpecularColor: {r: 0.44657695, g: 0.49641138, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657755, g: 0.4964127, b: 0.57481825, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -396,6 +396,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114523329792381026, guid: b6c3684d8b982384bab22b6c004e937c,
+        type: 2}
+      propertyPath: OnClodMowned.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4334478959160700, guid: b6c3684d8b982384bab22b6c004e937c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -433,6 +438,26 @@ Prefab:
       propertyPath: OnClodMowned.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1996987364}
+    - target: {fileID: 114523329792381026, guid: b6c3684d8b982384bab22b6c004e937c,
+        type: 2}
+      propertyPath: OnClodMowned.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114523329792381026, guid: b6c3684d8b982384bab22b6c004e937c,
+        type: 2}
+      propertyPath: OnClodMowned.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114523329792381026, guid: b6c3684d8b982384bab22b6c004e937c,
+        type: 2}
+      propertyPath: OnClodMowned.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdatePercent
+      objectReference: {fileID: 0}
+    - target: {fileID: 114523329792381026, guid: b6c3684d8b982384bab22b6c004e937c,
+        type: 2}
+      propertyPath: OnClodMowned.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6c3684d8b982384bab22b6c004e937c, type: 2}
   m_IsPrefabParent: 0
@@ -501,7 +526,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 440683540}
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 1.6, y: 3.77, z: -0.42}
+  m_LocalPosition: {x: 1.6, y: 50, z: -0.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -732,7 +757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1100756854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,6 +923,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419195040 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114872968458489462, guid: e155757fa209f4e4fb5749ccb80d7c1e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2000693386}
+  m_Script: {fileID: 11500000, guid: b0f820b8969a8e54ebb302ef4a4c3bc7, type: 3}
 --- !u!1001 &1487147569
 Prefab:
   m_ObjectHideFlags: 0
@@ -946,7 +977,7 @@ Prefab:
         type: 2}
       propertyPath: MowerController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1419195040}
     - target: {fileID: 114514948144138594, guid: 4611ca8fde0dbfc4383f544fcadf2203,
         type: 2}
       propertyPath: GardenBotStation
@@ -965,7 +996,7 @@ Prefab:
     - target: {fileID: 114514948144138594, guid: 4611ca8fde0dbfc4383f544fcadf2203,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4611ca8fde0dbfc4383f544fcadf2203, type: 2}
@@ -1522,27 +1553,37 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 429546967}
+      objectReference: {fileID: 0}
     - target: {fileID: 114535683750619822, guid: e155757fa209f4e4fb5749ccb80d7c1e,
         type: 2}
       propertyPath: environment
       value: 
-      objectReference: {fileID: 1572709440}
+      objectReference: {fileID: 0}
     - target: {fileID: 114535683750619822, guid: e155757fa209f4e4fb5749ccb80d7c1e,
         type: 2}
       propertyPath: mowerBase
       value: 
-      objectReference: {fileID: 84829000}
+      objectReference: {fileID: 0}
     - target: {fileID: 114535683750619822, guid: e155757fa209f4e4fb5749ccb80d7c1e,
         type: 2}
       propertyPath: rewardText
       value: 
-      objectReference: {fileID: 1984727586}
+      objectReference: {fileID: 0}
     - target: {fileID: 114535683750619822, guid: e155757fa209f4e4fb5749ccb80d7c1e,
         type: 2}
       propertyPath: rewardTotalText
       value: 
-      objectReference: {fileID: 1076955852}
+      objectReference: {fileID: 0}
+    - target: {fileID: 114535683750619822, guid: e155757fa209f4e4fb5749ccb80d7c1e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114535683750619822, guid: e155757fa209f4e4fb5749ccb80d7c1e,
+        type: 2}
+      propertyPath: criticColliderMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e155757fa209f4e4fb5749ccb80d7c1e, type: 2}
   m_IsPrefabParent: 0
