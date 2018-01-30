@@ -70,3 +70,7 @@
 *.gitignore.swp
 
 .DS_Store
+
+unity-environment/Assets/Plugins/Editor/JetBrains/
+
+unity-environment/Assets/Plugins/Editor/JetBrains\.meta
