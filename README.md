@@ -45,8 +45,13 @@ For the training succeed, we tuned the hyperparameters.
 Increase the buffer_size and the batch_size was a good idea from this issue : https://github.com/Unity-Technologies/ml-agents/issues/288
 
 ### The training
+We launch several training. We turned hyperparameters and even change the environment for it to be more easier for the agent to learn. Since we were not able to do the training on a GPU, it was very long to change something and have the result...
+
+But we trained an agent able to mown clods and avoid rocks !
+Here is the mean rewards during the training :
 
 ### Conclusion
+It was very fun for a first start ! We thank Unity guys who developed this new feature. We'll keep to work with it even after the end of the challenge :)
 
 ### Improvements
 - try the training with 2 or 3 rocks
